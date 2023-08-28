@@ -1,0 +1,13 @@
+DRC_bulk	../clone_estimate_bulk/exp_1_GBC_in_vitro/DRC_bulk/list.txt	bulk
+DRC_bulk_wilcox	../clone_estimate_bulk/exp_1_GBC_in_vitro/DRC_bulk_wilcox/list.txt	bulk
+DRC_bulk_fisher	../clone_estimate_bulk/exp_1_GBC_in_vitro/DRC_bulk_fisher/list.txt	bulk
+DRC_bulk_gam	../clone_estimate_bulk/exp_1_GBC_in_vitro/DRC_bulk_gam/list.txt	bulk
+TIC	../clone_estimate_bulk/exp_1_GBC_in_vivo/TIC/list.txt	bulk
+TIC_wilcox	../clone_estimate_bulk/exp_1_GBC_in_vivo/TIC_wilcox/list.txt	bulk
+TIC_fisher	../clone_estimate_bulk/exp_1_GBC_in_vivo/TIC_fisher/list.txt	bulk
+TIC_gam	../clone_estimate_bulk/exp_1_GBC_in_vivo/TIC_gam/list.txt	bulk
+treated_TIC	../clone_estimate_bulk/exp_1_GBC_in_vivo_treated/TIC/list.txt	bulk
+treated_TIC_wilcox	../clone_estimate_bulk/exp_1_GBC_in_vivo_treated/TIC_wilcox/list.txt	bulk
+treated_TIC_fisher	../clone_estimate_bulk/exp_1_GBC_in_vivo_treated/TIC_fisher/list.txt	bulk
+treated_TIC_gam	../clone_estimate_bulk/exp_1_GBC_in_vivo_treated/TIC_gam/list.txt	bulk
+DRC_sc	../clone_calling_sc/DRC/list.txt	sc

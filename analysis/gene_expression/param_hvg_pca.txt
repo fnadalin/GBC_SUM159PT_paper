@@ -1,0 +1,5 @@
+cores=1
+xmin=0.1
+xmax=10
+disps=0.5,1,1.5
+nfeats=1000,2000,5000

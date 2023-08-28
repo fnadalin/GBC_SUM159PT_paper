@@ -1,0 +1,3 @@
+fastqs,sample,library_type
+/hpcnfs/techunits/genomics/PublicData/Nicassio/mmarzi/FASTQ/210615_A00302_0309_AHY3CLDSXY/Sample_S34936_Multiome_GEX_01/,S34936_Multiome_GEX_01,Gene Expression
+/hpcnfs/techunits/genomics/PublicData/Nicassio/mmarzi/FASTQ/210615_A00302_0309_AHY3CLDSXY/Sample_S34937_SUM159_perturb_d0/,S34937_SUM159_perturb_d0,CRISPR Guide Capture

@@ -1,0 +1,9 @@
+P0	../GBC_calling/exp_4_amplicon_v2/4A_DNA/P0/out_d1_f1/groups.tsv	early
+P_end_1	../GBC_calling/exp_4_amplicon_v2/4A_DNA/P_end_1/out_d1_f1/groups.tsv	passive
+P_end_2	../GBC_calling/exp_4_amplicon_v2/4A_DNA/P_end_2/out_d1_f1/groups.tsv	passive
+P_end_3	../GBC_calling/exp_4_amplicon_v2/4A_DNA/P_end_3/out_d1_f1/groups.tsv	passive
+D15_A	../GBC_calling/exp_4_amplicon_v2/4A_DNA/D15_A/out_d1_f1/groups.tsv	late
+D15_B	../GBC_calling/exp_4_amplicon_v2/4A_DNA/D15_B/out_d1_f1/groups.tsv	late
+D15_C	../GBC_calling/exp_4_amplicon_v2/4A_DNA/D15_C/out_d1_f1/groups.tsv	late
+D15_D	../GBC_calling/exp_4_amplicon_v2/4A_DNA/D15_D/out_d1_f1/groups.tsv	late
+D15_E	../GBC_calling/exp_4_amplicon_v2/4A_DNA/D15_E/out_d1_f1/groups.tsv	late

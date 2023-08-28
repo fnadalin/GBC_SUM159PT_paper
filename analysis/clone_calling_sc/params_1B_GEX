@@ -1,0 +1,18 @@
+samples=( "T0_1" "T0_2" "T3" "T9" "T13" "T17" "T24" )
+surv=( "non-surv" "non-surv" "non-surv" "non-surv" "surv" "surv" "surv" )
+# to define a CB as quality_pass
+MIN_UMI_COUNT="10000"
+# to label cells with too high UMI count as doublet
+max_umi_count=( "70000" "70000" "100000" "100000" "100000" "100000" "100000" )
+# expected doublet rate based on cell load and 10x guidelines 
+doublet_rate=( "5.7" "5.7" "2.3" "2.3" "2.3" "2.3" "2.3" )
+# min read count to define a GBC as expressed in the cell
+MIN_READ_COUNT_EXPR="10"
+# minimum fraction of reads in (CB,GBC) wrt to the total read count for CB to define GBC as expressed in CB
+MIN_READ_FRAC_EXPR="0"
+# minimum fraction of reads in (CB,GBC) wrt to the read count of the top GBC in CB to define GBC as expressed in CB
+MIN_RANK1_READ_FRAC_EXPR="0.3"
+# p-value computed based on the probability to find this number of reads by chance, for each GBC (Poisson dist) 
+pval_cutoff=( "1" "1" "1" "1" "1" "1e-10" "1" )
+# min doublet score to label a cell as doublet; the value below is the min of the 99th percentile of T0_1 and T0_2, respectively
+DOUBLET_PROB_CUTOFF="0.00138197899391929"

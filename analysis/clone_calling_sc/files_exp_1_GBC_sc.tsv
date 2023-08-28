@@ -1,0 +1,17 @@
+T0_1	../cell_calling/1B_GEX/T0_1/outs/filtered_feature_bc_matrix	early
+T0_2	../cell_calling/1B_GEX/T0_2/outs/filtered_feature_bc_matrix	early
+T3	../cell_calling/1B_GEX/T3/outs/filtered_feature_bc_matrix	middle
+T9	../cell_calling/1B_GEX/T9/outs/filtered_feature_bc_matrix	middle
+T13	../cell_calling/1B_GEX/T13/outs/filtered_feature_bc_matrix	late
+T17	../cell_calling/1B_GEX/T17/outs/filtered_feature_bc_matrix	late
+T24	../cell_calling/1B_GEX/T24/outs/filtered_feature_bc_matrix	late
+P0_Multiome	../cell_calling/1C_GEX/P0_Multiome/outs/filtered_feature_bc_matrix	early_multiome
+T0_1_Multiseq	../cell_calling/1D_GEX_demux/demux/T0_1_Multiseq	passive
+T0_2_Multiseq	../cell_calling/1D_GEX_demux/demux/T0_2_Multiseq	passive
+T5_2_Multiseq	../cell_calling/1D_GEX_demux/demux/T5_2_Multiseq	middle
+T7_2_Multiseq	../cell_calling/1D_GEX_demux/demux/T7_2_Multiseq	middle
+T9_2_Multiseq	../cell_calling/1D_GEX_demux/demux/T9_2_Multiseq	middle
+T11_2_Multiseq	../cell_calling/1D_GEX_demux/demux/T11_2_Multiseq	middle
+T13_2_Multiseq	../cell_calling/1D_GEX_demux/demux/T13_2_Multiseq	late
+T15_2_Multiseq	../cell_calling/1D_GEX_demux/demux/T15_2_Multiseq	late
+P0_Multiome_2	../cell_calling/1E_GEX/P0_Multiome_2/outs/filtered_feature_bc_matrix	early_multiome

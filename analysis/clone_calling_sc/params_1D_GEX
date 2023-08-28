@@ -1,0 +1,19 @@
+samples=( "T0_1_Multiseq" "T0_2_Multiseq" "T5_2_Multiseq" "T7_2_Multiseq" "T9_2_Multiseq" "T11_2_Multiseq" "T13_2_Multiseq" "T15_2_Multiseq" )
+surv=( "non-surv" "non-surv" "non-surv" "non-surv" "non-surv" "non-surv" "surv" "surv" )
+# to define a CB as quality_pass
+MIN_UMI_COUNT="5000"
+# to label cells with too high UMI count as doublet
+max_umi_count=( "100000" "100000" "150000" "150000" "150000" "100000" "100000" "100000" )
+# expected doublet rate based on cell load and 10x guidelines
+# N.B. cell loading depends on the whole MULTI-Seq library, i.e. ~25000 cells
+doublet_rate=( "10" "10" "5" "5" "5" "5" "5" "5" )
+# min read count to define a GBC as expressed in the cell
+MIN_READ_COUNT_EXPR="10" 
+# minimum fraction of reads in (CB,GBC) wrt to the total read count for CB to define GBC as expressed in CB
+MIN_READ_FRAC_EXPR="0"
+# minimum fraction of reads in (CB,GBC) wrt to the read count of the top GBC in CB to define GBC as expressed in CB
+MIN_RANK1_READ_FRAC_EXPR="0.3"
+# p-value computed based on the probability to find this number of reads by chance, for each GBC (Poisson dist) 
+pval_cutoff=( "1" "1" "1" "1" "1" "1e-5" "1e-5" "1e-5" )
+# min doublet score to label a cell as doublet; the value below is the min of the 99th percentile of T0_1 and T0_2, respectively
+DOUBLET_PROB_CUTOFF="0.040942175612657"

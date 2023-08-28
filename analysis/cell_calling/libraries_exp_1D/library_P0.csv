@@ -1,0 +1,4 @@
+fastqs,sample,library_type
+/hpcnfs/techunits/genomics/PublicData/Nicassio/mmarzi/FASTQ/210809_A00302_0324_AHYCJMDSXY/Sample_S36713_650_GEX/,S36713_650_GEX,Gene Expression
+/hpcnfs/techunits/genomics/PublicData/Nicassio/mmarzi/FASTQ/211015_A00302_0340_BH27FJDSX2/Sample_S37351_S36713_650_GEX,S37351_S36713_650_GEX,Gene Expression
+/hpcnfs/techunits/genomics/PublicData/Nicassio/mmarzi/FASTQ/210809_A00302_0324_AHYCJMDSXY/Sample_S36646_50/,S36646_50,CRISPR Guide Capture

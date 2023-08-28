@@ -1,0 +1,6 @@
+P5OR_GBC_P0_1	../GBC_calling/exp_5_amplicon_v2/5A_DNA/P5OR_GBC_P0_1/out_d1_f1/groups.tsv	early
+P5OR_GBC_P0_2	../GBC_calling/exp_5_amplicon_v2/5A_DNA/P5OR_GBC_P0_2/out_d1_f1/groups.tsv	early
+P5OR_GBC_PACLI_D3	../GBC_calling/exp_5_amplicon_v2/5A_DNA/P5OR_GBC_PACLI_D3/out_d1_f1/groups.tsv	middle
+P5OR_GBC_PACLI_D10	../GBC_calling/exp_5_amplicon_v2/5A_DNA/P5OR_GBC_PACLI_D10/out_d1_f1/groups.tsv	middle
+P5OR_GBC_PACLI_D17	../GBC_calling/exp_5_amplicon_v2/5A_DNA/P5OR_GBC_PACLI_D17/out_d1_f1/groups.tsv	late
+P5OR_GBC_PACLI_D20	../GBC_calling/exp_5_amplicon_v2/5A_DNA/P5OR_GBC_PACLI_D20/out_d1_f1/groups.tsv	late
