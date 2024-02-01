@@ -1,7 +1,3 @@
-module purge
-module load r-4.1.0-gcc-9.3.0-wvnko7v gmp-6.1.2-gcc-9.3.0-hicntdj
-R_LIBS_USER="/hps/software/users/marioni/francesca/R_libs"
-export R_LIBS_USER
 
 SCRIPT_DIR=$( cd "../../scripts/clone_estimate/" ; pwd )
 
