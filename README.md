@@ -1,7 +1,8 @@
 # GBC SUM159PT paper
 
-This repository contains the code to reproduce the analysis reported in the article [Multi-omic lineage tracing predicts the transcriptional, epigenetic and genetic determinants of cancer evolution](https://doi.org/10.1101/2023.06.28.546923).  
-It features single-cell lineage tracing using genetic barcodes [Dixit *et al.*, 2016] coupled with single-cell RNA and multiome (RNA+ATAC) sequencing (10x).
+This repository contains the code to reproduce the analysis reported in the article:
+
+Nadalin *et al.* Multi-omic lineage tracing predicts the transcriptional, epigenetic and genetic determinants of cancer evolution. *biorxiv*. https://doi.org/10.1101/2023.06.28.546923
 
 [Description](##description)  
 [System requirements](##system-requirements)  
@@ -150,6 +151,13 @@ $ bash RUN_demultiplex.sh
 
 Given the high noise level observed in some samples and in order to recover more cells, demultiplexing is performed with a slightly modified version of [deMULTIplex](https://github.com/chris-mcginnis-ucsf/MULTI-seq). The difference between the two approaches essentially lies in how the MULTI-Seq barcode coverage across cells is evaluated.
 
+Only cell calling, for MDA-MB-231:
+
+```
+$ cd gbc_sum159pt_paper/analysis/cell_calling_MDA
+$ bash RUN_cellranger.sh
+```
+
 ### 4. Clone calling (single-cell samples)
 
 From step 4 on, we will use the Seurat package. Feature-cell expression matrices are stored in Seurat objects.
@@ -183,12 +191,21 @@ Finally, clones are grouped into lineages using an unsupervised approach that co
 The pipeline is run as follows:
 
 ```
-$ cd gbc_sum159pt_paper/analysis/clone_calling_sc
+$ cd gbc_sum159pt_paper/analysis/gene_expression
 $ bash RUN_clustering_ccRegress.sh
 $ bash RUN_clustering_ccRegress_filt.sh
 $ bash RUN_clustering_ccRegress_filt_2ndRound.sh
 $ bash RUN_DEA_ccRegress.sh
 $ bash RUN_lineage.sh
+```
+
+For MDA-MB-231:
+
+```
+$ cd gbc_sum159pt_paper/analysis/gene_expression_MDA
+$ bash RUN_clustering_ccRegress.sh
+$ bash RUN_clustering_ccRegress_filt.sh
+$ bash RUN_DEA_ccRegress.sh
 ```
 
 ### 6. Barcoded multiome data analysis
@@ -201,7 +218,13 @@ $ cd gbc_sum159pt_paper/analysis/multiome
 $ bash RUN_clone_assignment.sh
 ```
 
-Then, RNA and ATAC are analysed separately.
+Then, RNA and ATAC are analysed separately. See 
+
+```
+gbc_sum159pt_paper/analysis/multiome/workflow.md 
+```
+
+for details.
 
 ### 7. Identification of transcriptionally stable clones
 
@@ -220,7 +243,7 @@ $ bash RUN_phenotype_distance.sh
 $ bash RUN_DRC_TIC_analysis.sh
 ```
 
-### 8. Whole-exome sequencing data analysis post-processing
+### 8. Whole-exome sequencing data analysis
 
 Using CNVkit, we obtained the list of predicted copy-number variations (CNV) between treated and untreated conditions. A consensus CNV is obtained across multiple replicates, asking that the CNV locus should be shared by > 80%. We then compute the read coverage on CNV loci in scATAC-Seq samples:
 
@@ -230,7 +253,9 @@ $ bash RUN_CNV_analysis.sh
 $ bash RUN_CNV_double_treatment_analysis.sh
 ```
 
-### 9. Analysis of data from [Pal *et al.*, 2021]
+### 9. Analysis of public datasets
+
+#### 9.0. scRNA-Seq of primary breast tumours [Pal *et al.*, 2021]
 
 This steps aims to detect S1, S2 and S3 signatures in scRNA-Seq data from primary TNBC patients from [Pal *et al.*, 2021]. We analyse samples 0106, 0114, 0125 and 0126.
 
@@ -248,21 +273,39 @@ $ cd gbc_sum159pt_paper/analysis/Visvader
 $ bash RUN_Visvader_analysis.sh
 ```
 
-### 10. Meta-program analysis [Gavish *et al.*, 2023]
+#### 9.1. Curated Cancer Cell Atlas (3CA) meta-programs [Gavish *et al.*, 2023]
 
+We downloaded the top 50 significant genes for the tumour meta-programs from [Gavish *et al.*]. The table is stored in data/3CA.
+
+To run the analysis:
+
+```
+$ cd gbc_sum159pt_paper/analysis/3CA
+$ bash RUN_3CA_analysis.sh
+```
+
+Similarly, for MDA-MB-231:
+
+```
+$ cd gbc_sum159pt_paper/analysis/3CA_MDA
+$ bash RUN_3CA_analysis.sh
+```
+
+#### 9.2. TCGA
+
+```
+TODO
+```
 
 ## Instructions for generating the figures
 
 First, we need to download the Seurat objects and the tables:
 
 ```
-$ 
+TODO
 ```
 
 
-## Citing
+## Contact
 
-If you find our results useful for your research, please cite our preprint:
-
-Nadalin *et al.* Multi-omic lineage tracing predicts the transcriptional, epigenetic and genetic determinants of cancer evolution. *biorxiv*. https://doi.org/10.1101/2023.06.28.546923
-
+For feedback or questions about this repository, please contact [Francesca Nadalin](mailto:francesca@ebi.ac.uk). 
