@@ -291,11 +291,6 @@ $ cd gbc_sum159pt_paper/analysis/3CA_MDA
 $ bash RUN_3CA_analysis.sh
 ```
 
-#### 9.2. TCGA
-
-```
-TODO
-```
 
 ## Instructions for generating the figures
 
