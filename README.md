@@ -34,9 +34,9 @@ RcisTarget (v1.13.0), AUCell (v1.15.0), ComplexHeatmap (v2.9.4), MAST (v1.19.0),
 
 Additionally, the following packages should be downloaded and installed (see [Installation](#installation)):
 
-* https://gitlab.ebi.ac.uk/francesca/barcode_groups
-* https://gitlab.ebi.ac.uk/francesca/fastqsplit
-* https://gitlab.ebi.ac.uk/francesca/r_scripts
+* https://github.com/fnadalin/barcode_groups
+* https://github.com/fnadalin/fastqsplit
+* https://github.com/fnadalin/r_scripts
 
 The code was executed on a GNU/Linux machine, using 4 cores and 64GB RAM for cell calling and 1 core and ~25GB RAM for downstream analysis.
 
@@ -47,12 +47,12 @@ To run the analysis, download and save the present repository and the required p
 ```
 $ mkdir <MYDIR>
 $ cd <MYDIR>
-$ git clone https://gitlab.ebi.ac.uk/francesca/gbc_sum159pt_paper.git
+$ git clone https://github.com/fnadalin/gbc_sum159pt_paper.git
 $ mkdir git
 $ cd git
-$ git clone https://gitlab.ebi.ac.uk/francesca/barcode_groups.git
-$ git clone https://gitlab.ebi.ac.uk/francesca/fastqsplit.git
-$ git clone https://gitlab.ebi.ac.uk/francesca/r_scripts.git
+$ git clone https://github.com/fnadalin/barcode_groups.git
+$ git clone https://github.com/fnadalin/fastqsplit.git
+$ git clone https://github.com/fnadalin/r_scripts.git
 ```
 
 where ```<MYDIR>``` is the directory where analysis and scripts will be stored.
@@ -290,16 +290,6 @@ Similarly, for MDA-MB-231:
 $ cd gbc_sum159pt_paper/analysis/3CA_MDA
 $ bash RUN_3CA_analysis.sh
 ```
-
-
-## Instructions for generating the figures
-
-First, we need to download the Seurat objects and the tables:
-
-```
-TODO
-```
-
 
 ## Contact
 
