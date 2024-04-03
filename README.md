@@ -4,12 +4,12 @@ This repository contains the code to reproduce the analysis reported in the arti
 
 Nadalin *et al.* Multi-omic lineage tracing predicts the transcriptional, epigenetic and genetic determinants of cancer evolution. *biorxiv*. https://doi.org/10.1101/2023.06.28.546923
 
-[Description](##description)  
-[System requirements](##system-requirements)  
-[Installation](##installation)  
-[Instructions for reproducing the analysis](##instructions-for-reproducing-the-analysis)  
-[Instructions for generating the figures](##instructions-for-generating-the-figures)  
-[Contact](##contact) 
+[Description](#description)  
+[System requirements](#system-requirements)  
+[Installation](#installation)  
+[Instructions for reproducing the analysis](#instructions-for-reproducing-the-analysis)  
+[Instructions for generating the figures](#instructions-for-generating-the-figures)  
+[Contact](#contact) 
 
 ## Description
 
