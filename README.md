@@ -7,7 +7,7 @@ Nadalin *et al.* Multi-omic lineage tracing predicts the transcriptional, epigen
 [Description](#description)  
 [System requirements](#system-requirements)  
 [Installation](#installation)  
-[Instructions for reproducing the analysis](#instructions-for-reproducing-the-analysis)
+[Instructions for reproducing the analysis](#instructions-for-reproducing-the-analysis)  
 [Contact](#contact) 
 
 ## Description
