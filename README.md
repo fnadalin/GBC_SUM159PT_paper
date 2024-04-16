@@ -124,7 +124,7 @@ $ for i in 1 1_invivo_treated 4 5
 The experiment number represent the infection, so that GBC IDs from samples in the same experiment refer to the same GBC sequence.
 Note that the order of the experiments matters ("1" must be executed before "1\_invivo\_treated").
 
-The output will contain the list of GBC sequences and the associated statistics (see [barcode_groups](https://gitlab.ebi.ac.uk/francesca/barcode_groups) for details).
+The output is the list of GBC sequences and the associated statistics (see [barcode_groups](https://github.com/fnadalin/barcode_groups) for details).
 
 ### 2.  Clone estimate (bulk samples)
 
@@ -136,6 +136,8 @@ $ cd gbc_sum159pt_paper/analysis/clone_estimate_bulk
 $ bash RUN_clone_estimate.sh
 $ bash RUN_DRC_TIC_prediction.sh
 ```
+
+The output is a tsv file containing, for each sample, the raw and normalised GBC count, and the predicted set of recurrently expanded clones (in tumours or upon treatment).
 
 ### 3. Cell calling and sample demultiplexing
 
@@ -150,7 +152,11 @@ $ bash RUN_cellranger.sh
 $ bash RUN_demultiplex.sh
 ```
 
+The output is a gene-cell expression matrix for each library.
+
 Given the high noise level observed in some samples and in order to recover more cells, demultiplexing is performed with a slightly modified version of [deMULTIplex](https://github.com/chris-mcginnis-ucsf/MULTI-seq). The difference between the two approaches essentially lies in how the MULTI-Seq barcode coverage across cells is evaluated.
+
+The output of the demultiplexing is a gene-cell expression matrix for each demultiplexed sample.
 
 Only cell calling, for MDA-MB-231:
 
@@ -175,6 +181,8 @@ The pipeline is run as follows:
 $ cd gbc_sum159pt_paper/analysis/clone_calling_sc
 $ bash RUN_clone_calling.sh
 ```
+
+The output of the above is a table containing the detected GBCs and a flag indicating whether they are expressed or not in each cell, as well as several statistics and plots on GBC / CB count distribution. Also, the output contains the list of clones (i.e., GBC sets expressed in the same cell) and their counts.
 
 ### 5. Barcoded scRNA-seq data analysis
 
@@ -209,6 +217,10 @@ $ bash RUN_clustering_ccRegress_filt.sh
 $ bash RUN_DEA_ccRegress.sh
 ```
 
+The output is a folder containing the results of the analysis for each experiment. It is hierarchically organised: an experiment can contain multiple conditions, and each condition can refer to multiple samples.
+The analysis consists of dimensional reduction and clustering, cluster evaluation, plotting, and differential expression analysis.
+Dimensional reduction and clustering results are saved in the same Seurat object (see [r_scripts](https://github.com/fnadalin/r_scripts)).
+
 ### 6. Barcoded multiome data analysis
 
 Multi-omic (RNA+ATAC) analysis of clonal populations at single-nucleus resolution. 
@@ -219,13 +231,15 @@ $ cd gbc_sum159pt_paper/analysis/multiome
 $ bash RUN_clone_assignment.sh
 ```
 
-Then, RNA and ATAC are analysed separately. See 
+Then, RNA and ATAC are analysed separately. The results of the scRNA-Seq data analysis are analogous to the above. 
+See 
 
 ```
 gbc_sum159pt_paper/analysis/multiome/workflow.md 
 ```
 
-for details.
+for details on how to reproduce the analysis.
+The results of the scATAC-Seq data analysis is a cisTopic object containing the probability assignments of region to topics and of topic to cells, and the results of the irreproducible discovery rate (IDR) comparing the two scATAC-Seq replicates.
 
 ### 7. Identification of transcriptionally stable clones
 
@@ -244,6 +258,8 @@ $ bash RUN_phenotype_distance.sh
 $ bash RUN_DRC_TIC_analysis.sh
 ```
 
+The output is the matrix of mutual clone sharedness across clusters in two distinct experiments, the distribution of cell-cell distances, and the list of clones classified as tumour initiating or drug tolerant.
+
 ### 8. Whole-exome sequencing data analysis
 
 Using CNVkit, we obtained the list of predicted copy-number variations (CNV) between treated and untreated conditions. A consensus CNV is obtained across multiple replicates, asking that the CNV locus should be shared by > 80%. We then compute the read coverage on CNV loci in scATAC-Seq samples:
@@ -253,6 +269,8 @@ $ cd gbc_sum159pt_paper/analysis/wes
 $ bash RUN_CNV_analysis.sh
 $ bash RUN_CNV_double_treatment_analysis.sh
 ```
+
+The output of the scATAC-Seq data analysis is the cumulative coverage on CNV loci, whereas the output of the scRNA-Seq data analysis is the expression of the genes spanned by CNVs.
 
 ### 9. Analysis of public datasets
 
@@ -274,6 +292,8 @@ $ cd gbc_sum159pt_paper/analysis/Visvader
 $ bash RUN_Visvader_analysis.sh
 ```
 
+The output of the analysis is the result of the Scissor method when the input phenotype of a cell is whether it shows association with an input gene signature (the subpopulation signature in this case). It also outputs the significance of the phenotype with respect to a clustering of the cells.
+
 #### 9.1. Curated Cancer Cell Atlas (3CA) meta-programs [Gavish *et al.*, 2023]
 
 We downloaded the top 50 significant genes for the tumour meta-programs from [Gavish *et al.*]. The table is stored in data/3CA.
@@ -291,6 +311,8 @@ Similarly, for MDA-MB-231:
 $ cd gbc_sum159pt_paper/analysis/3CA_MDA
 $ bash RUN_3CA_analysis.sh
 ```
+
+The output is a module score for each gene expression meta-program, for each cell, and the associated AUC.
 
 ## Contact
 
