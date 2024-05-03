@@ -60,12 +60,12 @@ where ```<MYDIR>``` is the directory where analysis and scripts will be stored.
 Make sure that both R and Rscript executables are in your PATH and install the required libraries as specified in [System requirements](#system-requirements).
 
 All but steps 0 and 2 were executed on HPC infrastructures.
-Steps 1 and 3 were run on torque architecture, whereas and 4 to 9 on lsf, hence the syntax of the submission commands is slightly different.
+Steps 1 and 3 were run on torque architecture, whereas and 4 to 9 on lsf.
 
 ## Instructions for reproducing the analysis
 
 The analysis is organised in 10 steps. There are dependencies between them, so the analysis should be run in the same order as reported below.
-We report all the steps, including the code used for generating the feature-barcode matrices. If those are provided, go directly to step 4.
+We report all the steps, including the code used for generating the feature-barcode matrices (steps 1-3). Go directly to step 4 to reproduce the analysis starting from the feature-barcode matrices.
 
 ### 0. Data download
 
