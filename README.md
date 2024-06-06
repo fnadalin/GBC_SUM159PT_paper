@@ -35,9 +35,12 @@ RcisTarget (v1.13.0), AUCell (v1.15.0), ComplexHeatmap (v2.9.4), MAST (v1.19.0),
 
 Additionally, the following packages should be downloaded and installed (see [Installation](#installation)):
 
+* https://github.com/fnadalin/r_scripts
+
+and, to generate count matrices from FASTQ files, also:
+
 * https://github.com/fnadalin/barcode_groups
 * https://github.com/fnadalin/fastqsplit
-* https://github.com/fnadalin/r_scripts
 
 The code was executed on a GNU/Linux machine, using 4 cores and 64GB RAM for cell calling and 1 core and ~25GB RAM for downstream analysis.
 
