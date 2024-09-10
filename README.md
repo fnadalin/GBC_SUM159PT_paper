@@ -2,7 +2,7 @@
 
 This repository contains the code to reproduce the analysis reported in the article:
 
-Nadalin *et al.* Multi-omic lineage tracing predicts the transcriptional, epigenetic and genetic determinants of cancer evolution. *Nature Communications* (2024). [https://doi.org/10.1101/2023.06.28.546923](https://doi.org/10.1038/s41467-024-51424-4)
+Nadalin *et al.* Multi-omic lineage tracing predicts the transcriptional, epigenetic and genetic determinants of cancer evolution. *Nature Communications* (2024). https://doi.org/10.1038/s41467-024-51424-4
 
 For instructions on how to reproduce the figures, please refer to [GBC_SUM159PT_paper_figures](https://github.com/fnadalin/GBC_SUM159PT_paper_figures).
 
