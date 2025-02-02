@@ -317,6 +317,10 @@ $ bash RUN_3CA_analysis.sh
 
 The output is a module score for each gene expression meta-program, for each cell, and the associated AUC.
 
+## Acknowledgements
+
+This repository was created with the help of [Simone Procaccia](https://github.com/simozhou) (Barcoded multiome data analysis).
+
 ## Contact
 
 For feedback or questions about this repository, please contact [Francesca Nadalin](mailto:francesca@ebi.ac.uk). 
